@@ -1,104 +1,81 @@
-"use client";
-import Link from "next/link";
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaGoogle,
-  FaRegEnvelope,
-  FaLock
-} from "react-icons/fa";
-
+const tags: string[] = [
+  "User Card",
+  "Jobs List",
+  "Collection",
+  "Person",
+  "Fashion",
+];
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-20 bg-gray-400">
-      <div className="flex w-2/3 max-w-4xl bg-white rounded-2xl shadow-2xl">
-        <div className="w-3/5 p-5">
-          <div className="text-left font-semibold">
-            <span className="text-[#4fb177] mr-1">Sotatek</span>
-            JSC
-          </div>
+    <div className="flex h-screen w-full items-center justify-center bg-[#E5E7F0]">
+      <div className="rounded-[26px] bg-[#EFF0F1] p-[26px]">
+        <div className="mb-14">
+          <h1 className="mb-6 text-[32px] font-bold">Popular Collections</h1>
 
-          <div className="py-10 flex flex-col items-center gap-2">
-            <div className="text-3xl font-bold text-[#4fb177] mb-2">
-              Sign in to your account
-            </div>
-
-            <div className="border-2 w-10 border-[#4fb177] inline-block mb-2"></div>
-
-            <div className="flex justify-center">
+          <div className="flex gap-x-2 text-base font-medium text-[#0E0E38]">
+            {tags.map((item) => (
               <a
-                href="#"
-                className="border-2 border-gray-200 rounded-full p-3 mx-1"
+                className="cursor-pointer rounded-lg bg-white p-[10px] hover:bg-[#0E0E38] hover:text-white"
+                key={item}
               >
-                <FaFacebookF className="text-sm" />
+                {item}
               </a>
-              <a
-                href="#"
-                className="border-2 border-gray-200 rounded-full p-3 mx-1"
-              >
-                <FaLinkedinIn className="text-sm" />
-              </a>
-              <a
-                href="#"
-                className="border-2 border-gray-200 rounded-full p-3 mx-1"
-              >
-                <FaGoogle className="text-sm" />
-              </a>
-            </div>
-
-            <p className="text-gray-400">or use your email account</p>
-
-            <div className="flex items-center flex-col">
-              <div className="bg-gray-100 p-2 flex items-center mb-3">
-                <FaRegEnvelope className="text-gray-400 m-2" />
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  name="email"
-                  className="bg-gray-100 flex-1"
-                />
-              </div>
-
-              <div className="bg-gray-100 p-2 flex items-center">
-                <FaLock className="text-gray-400 m-2" />
-                <input
-                  type="password"
-                  placeholder="Enter your password"
-                  name="password"
-                  className="bg-gray-100 flex-1"
-                />
-              </div>
-            </div>
-
-            <div className="flex w-64 justify-between my-5">
-              <label className="flex items-center text-xs">
-                <input type="checkbox" name="remember" className="mr-1" />
-                Remember me
-              </label>
-              <Link href="#" className="text-xs">Forgot Password</Link>
-            </div>
-
-            <button className="bg-[#4fb177] border-2 rounded-full px-12 py-2 text-white  inline-block font-semibold hover:bg-white hover:text-[#4fb177]">
-              Sign In
-            </button>
+            ))}
           </div>
         </div>
 
-        <div className="w-2/5 bg-[#4fb177] rounded-tr-2xl rounded-br-2xl text-white py-36 px-12 flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold mb-2">Hello, Friend!</h2>
-          <div className="border-2 w-10 border-white inline-block mb-2"></div>
-          <p className="mb-2">
-            Fill up personal information and start journey with us.
-          </p>
+        <div className="flex w-full gap-x-16 font-medium">
+          <div className="rounded-[32px] bg-white p-6">
+            <div className="mb-6 flex flex-col items-center">
+              <img
+                className="mb-4 h-[268px] w-full rounded-3xl object-cover"
+                src="https://w0.peakpx.com/wallpaper/856/668/HD-wallpaper-pain-pain-thumbnail.jpg"
+                alt="example image"
+              />
 
-          <Link
-            href="/sign-up"
-            className="border-2 inline-block font-semibold rounded-full px-12 py-2 hover:bg-white hover:text-[#4fb177]"
-          >
-            Sign Up
-          </Link>
+              <div className="flex gap-x-4">
+                <img
+                  className="h-[97px] w-[119px] rounded-3xl object-cover"
+                  src="https://w0.peakpx.com/wallpaper/856/668/HD-wallpaper-pain-pain-thumbnail.jpg"
+                  alt="example image"
+                />
+                <img
+                  className="h-[97px] w-[119px] rounded-3xl object-cover"
+                  src="https://w0.peakpx.com/wallpaper/856/668/HD-wallpaper-pain-pain-thumbnail.jpg"
+                  alt="example image"
+                />
+                <img
+                  className="h-[97px] w-[119px] rounded-3xl object-cover"
+                  src="https://w0.peakpx.com/wallpaper/856/668/HD-wallpaper-pain-pain-thumbnail.jpg"
+                  alt="example image"
+                />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <p className="text-2xl">People</p>
+              <p className="flex items-center text-base">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="mr-2 h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                  />
+                </svg>
+                144
+              </p>
+            </div>
+          </div>
+          {/*            */}
         </div>
       </div>
-    </main>
+    </div>
   );
 }
