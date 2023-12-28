@@ -1,5 +1,5 @@
 const tags: string[] = ["Profile", "New york", "Relaxing", "Person", "Fashion"];
-export default function ImageLists() {
+export default function ImageList() {
   return (
     <div className="flex lg:h-screen w-full items-center justify-center bg-[#E5E7F0]">
       <div className="rounded-[26px] bg-[#EFF0F1] p-[26px]">

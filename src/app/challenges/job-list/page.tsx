@@ -165,7 +165,7 @@ const jobLists: IJobComponentProps[] = [
   },
 ];
 
-export default function JobLists() {
+export default function JobList() {
   return (
     <div className="bg-[#DBD5EC] flex items-center justify-center w-full h-screen">
       <div className="bg-white p-[72px] w-[640px] rounded-3xl shadow-lg">
